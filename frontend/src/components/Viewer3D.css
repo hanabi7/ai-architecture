@@ -1,0 +1,129 @@
+/* Viewer3D 样式 */
+.viewer-3d-container {
+  width: 100%;
+}
+
+.viewer-3d-card {
+  height: 100%;
+}
+
+.viewer-3d-card .ant-card-body {
+  padding: 0;
+}
+
+.canvas-container {
+  position: relative;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.viewer-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.viewer-hints {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  background: #f5f5f5;
+  border-radius: 0 0 8px 8px;
+}
+
+/* 材质面板样式 */
+.materials-panel {
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.material-card {
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.material-card:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.material-card.selected {
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+.material-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.material-color {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.material-title h4 {
+  margin: 0 0 4px 0;
+  font-size: 14px;
+}
+
+.material-desc {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.material-props {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.prop-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+}
+
+.prop-item span {
+  width: 40px;
+  color: #666;
+}
+
+.prop-item .ant-progress {
+  flex: 1;
+}
+
+.material-location {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #f0f0f0;
+  font-size: 12px;
+  color: #888;
+}
+
+/* 地点面板样式 */
+.location-panel .ant-card {
+  margin-bottom: 16px;
+}
+
+.context-desc {
+  margin-top: 16px;
+}
+
+.context-desc h5 {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.context-desc p {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.6;
+}

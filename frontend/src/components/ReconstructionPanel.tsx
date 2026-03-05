@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Card, Button, Radio, Spin, Progress, message } from 'antd';
 import { ArrowLeftOutlined, CheckOutlined, LoadingOutlined } from '@ant-design/icons';
 import { startReconstruction, getReconstructionStatus } from '../api';
+import './ReconstructionPanel.css';
 
 interface ReconstructionPanelProps {
   project: any;

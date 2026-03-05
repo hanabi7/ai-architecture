@@ -1,24 +1,73 @@
-# 项目一：AI × 建筑赋能
+# AI 建筑可视化项目
 
-## 项目定位
-基于 AI 技术为建筑行业提供智能化解决方案，探索人工智能在建筑领域的应用场景与落地路径。
+基于 AI 的建筑效果图生成与 3D 可视化系统。
 
-## 可能的方向
-- 建筑设计辅助（生成式设计、参数化优化）
-- 施工管理智能化（进度预测、资源调度）
-- BIM 与 AI 结合（智能审图、冲突检测）
-- 建筑性能分析（能耗模拟、结构优化）
-- 智慧城市与建筑运营
+## 功能
 
-## 文件结构
+- 📐 **草图上传** - 上传建筑草图
+- 🎨 **AI 生图** - 生成建筑效果图 (Midjourney/通义万相)
+- 🔧 **3D 重建** - 生成 Gaussian Splatting 3D 模型
+- 👁️ **Web 可视化** - 交互式 3D 展示 + 材质信息
+
+## 项目结构
+
 ```
-project-ai-architecture/
-├── README.md          # 本文件
-├── docs/              # 文档资料
-├── data/              # 数据集、参考资料
-├── prompts/           # AI 提示词库
-└── outputs/           # 生成成果
+ai-architecture/
+├── backend/          # FastAPI 后端
+│   ├── app/
+│   │   ├── main.py
+│   │   └── services/
+│   └── requirements.txt
+├── frontend/         # React + Three.js 前端
+│   ├── src/
+│   └── package.json
+└── docs/            # 文档
 ```
 
-## 创建时间
-2026-03-05
+## 快速开始
+
+### 1. 启动后端
+
+```bash
+cd backend
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+
+# 配置环境变量
+cp .env.example .env
+# 编辑 .env 填入 API Key
+
+python app/main.py
+```
+
+后端运行在 http://localhost:8000
+
+### 2. 启动前端
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+前端运行在 http://localhost:3000
+
+## API 说明
+
+| 接口 | 方法 | 描述 |
+|-----|------|------|
+| `/api/v1/generate` | POST | 草图生成效果图 |
+| `/api/v1/reconstruct` | POST | 效果图生成 3D 模型 |
+| `/api/v1/materials/analyze` | POST | 分析材质 |
+| `/api/v1/projects` | CRUD | 项目管理 |
+
+## 技术栈
+
+- **后端**: FastAPI + Python
+- **前端**: React + TypeScript + Three.js + Ant Design
+- **3D 渲染**: Gaussian Splatting + WebGL
+
+## 许可证
+
+MIT

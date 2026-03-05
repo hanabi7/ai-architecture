@@ -3,9 +3,10 @@ import { Upload, Button, Input, Select, Form, Card, message } from 'antd';
 import { InboxOutlined, UploadOutlined } from '@ant-design/icons';
 import { uploadSketch, createProject } from '../api';
 import type { UploadFile } from 'antd/es/upload/interface';
+import './SketchUploader.css';
 
 const { Dragger } = Upload;
-const { TextArea } = React.lazy(() => import('antd'));
+const { TextArea } = Input;
 
 interface SketchUploaderProps {
   onUploadSuccess: (project: any) => void;

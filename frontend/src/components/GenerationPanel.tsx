@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Card, Image, Button, Radio, Spin, message, Tag } from 'antd';
 import { ReloadOutlined, CheckOutlined, ArrowLeftOutlined } from '@ant-design/icons';
 import { generateFromSketch } from '../api';
+import './GenerationPanel.css';
 
 interface GenerationPanelProps {
   project: any;

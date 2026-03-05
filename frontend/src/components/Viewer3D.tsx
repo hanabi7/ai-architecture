@@ -13,6 +13,7 @@ import { OrbitControls, Environment, ContactShadows } from '@react-three/drei';
 import { GaussianSplatMesh } from './GaussianSplatMesh';
 import { MapContainer, TileLayer, Marker } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
+import './Viewer3D.css';
 
 interface Viewer3DProps {
   project: any;

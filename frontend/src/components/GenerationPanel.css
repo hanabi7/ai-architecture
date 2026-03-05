@@ -1,0 +1,94 @@
+/* GenerationPanel 样式 */
+.generation-panel {
+  width: 100%;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.comparison-view {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.sketch-card,
+.render-card {
+  height: 100%;
+}
+
+.sketch-card img,
+.render-card img {
+  width: 100%;
+  height: 400px;
+  object-fit: contain;
+  background: #f5f5f5;
+}
+
+.loading-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  background: #fafafa;
+  border-radius: 8px;
+}
+
+.loading-placeholder p {
+  margin-top: 16px;
+  font-size: 16px;
+  color: #666;
+}
+
+.loading-placeholder .hint {
+  font-size: 12px;
+  color: #999;
+}
+
+.generated-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.image-option {
+  position: relative;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.image-option:hover {
+  border-color: #1890ff;
+}
+
+.image-option.selected {
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+.image-option .ant-radio {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 1;
+}
+
+.image-option img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.provider-tag {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  font-size: 10px;
+}

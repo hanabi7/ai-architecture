@@ -1,0 +1,47 @@
+/* ReconstructionPanel 样式 */
+.reconstruction-panel {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.reconstruction-panel .ant-radio-group {
+  display: flex;
+  gap: 16px;
+}
+
+.reconstruction-panel .ant-radio-button-wrapper {
+  height: auto;
+  padding: 16px;
+  text-align: center;
+}
+
+.reconstruction-panel .ant-radio-button-wrapper span {
+  display: block;
+}
+
+.reconstruction-panel .ant-radio-button-wrapper small {
+  color: #888;
+  font-size: 12px;
+}
+
+.processing-status,
+.completed-status,
+.failed-status {
+  text-align: center;
+  padding: 40px;
+  background: #fafafa;
+  border-radius: 8px;
+  margin-top: 24px;
+}
+
+.processing-status p,
+.completed-status p {
+  margin-top: 16px;
+  font-size: 16px;
+  color: #666;
+}
+
+.processing-status .hint {
+  font-size: 12px;
+  color: #999;
+}
