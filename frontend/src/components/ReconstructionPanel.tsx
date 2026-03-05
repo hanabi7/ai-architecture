@@ -59,7 +59,7 @@ export const ReconstructionPanel: React.FC<ReconstructionPanelProps> = ({
 
       pollStatus();
 
-    } catch (error) {
+    } catch (error: any) {
       setStatus('failed');
       message.error('启动重建失败: ' + error.message);
     }

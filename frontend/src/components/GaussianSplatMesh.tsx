@@ -78,11 +78,10 @@ interface GaussianSplatMeshProps {
 }
 
 export const GaussianSplatMesh: React.FC<GaussianSplatMeshProps> = ({
-  url,
-  onSectionClick
+  url
 }) => {
   const meshRef = useRef<THREE.Mesh>(null);
-  const { camera, gl, scene } = useThree();
+  const { gl } = useThree();
   const splatDataRef = useRef<any>(null);
 
   useEffect(() => {

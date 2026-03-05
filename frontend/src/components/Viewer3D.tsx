@@ -1,9 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
 import { Card, Button, Tabs, Descriptions, Tag, Progress, Row, Col } from 'antd';
 import { 
   ReloadOutlined, 
   DownloadOutlined,
-  EnvironmentOutlined,
   ExperimentOutlined,
   SafetyOutlined,
   DollarOutlined
@@ -22,7 +21,6 @@ interface Viewer3DProps {
 
 export const Viewer3D: React.FC<Viewer3DProps> = ({ project, onRestart }) => {
   const [selectedMaterial, setSelectedMaterial] = useState<any>(null);
-  const [activeSection, setActiveSection] = useState<string | null>(null);
 
   // 示例材质数据 (实际应从后端获取)
   const materials = project?.materials || [
@@ -120,7 +118,6 @@ export const Viewer3D: React.FC<Viewer3DProps> = ({ project, onRestart }) => {
                 {/* Gaussian Splatting 模型 */}
                 <GaussianSplatMesh 
                   url={project?.model3dUrl || '/mock/model.splat'}
-                  onSectionClick={setActiveSection}
                 />
                 
                 {/* 环境 */}
@@ -162,7 +159,7 @@ export const Viewer3D: React.FC<Viewer3DProps> = ({ project, onRestart }) => {
                 label: '🎨 材质信息',
                 children: (
                   <div className="materials-panel">
-                    {materials.map((mat) => (
+                    {materials.map((mat: any) => (
                       <Card
                         key={mat.id}
                         size="small"

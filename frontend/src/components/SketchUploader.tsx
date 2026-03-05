@@ -49,7 +49,7 @@ export const SketchUploader: React.FC<SketchUploaderProps> = ({ onUploadSuccess 
         style: values.style
       });
 
-    } catch (error) {
+    } catch (error: any) {
       message.error('上传失败: ' + error.message);
     } finally {
       setUploading(false);
